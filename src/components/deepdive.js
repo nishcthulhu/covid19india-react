@@ -6,6 +6,7 @@ import NationalityChart from './Charts/nationalitychart';
 import AllStatesChart from './Charts/allstates';
 import TotalConfirmedChart from './Charts/totalconfirmedchart';
 import DailyConfirmedChart from './Charts/dailyconfirmedchart';
+import NormalizedStates from './Charts/normalizedstates';
 
 function DeepDive(props) {
   const [fetched, setFetched] = useState(false);
@@ -59,6 +60,13 @@ function DeepDive(props) {
         <div className="card fadeInUp" style={{animationDelay: '0.7s'}}>
           <AllStatesChart
             title="States - Total Cases"
+            data={statesTimeSeries}
+          />
+        </div>
+
+        <div className="card fadeInUp" style={{animationDelay: '0.7s'}}>
+          <NormalizedStates
+            title="States - Growth Rate"
             data={statesTimeSeries}
           />
         </div>
