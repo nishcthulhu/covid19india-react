@@ -1,12 +1,15 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
-import GenderChart from './Charts/genderchart';
 import AgeChart from './Charts/agechart';
-import NationalityChart from './Charts/nationalitychart';
 import AllStatesChart from './Charts/allstates';
-import TotalConfirmedChart from './Charts/totalconfirmedchart';
 import DailyConfirmedChart from './Charts/dailyconfirmedchart';
+
 import NormalizedStates from './Charts/normalizedstates';
+import GenderChart from './Charts/genderchart';
+import NationalityChart from './Charts/nationalitychart';
+import TotalConfirmedChart from './Charts/totalconfirmedchart';
+
+import axios from 'axios';
+import React, {useState, useEffect} from 'react';
+
 
 function DeepDive(props) {
   const [fetched, setFetched] = useState(false);
