@@ -44,6 +44,7 @@ function DeepDive(props) {
   };
 
   return (
+    
     <div className="cards-container">
       <section className="cards">
         <div className="card fadeInUp" style={{animationDelay: '0.7s'}}>
@@ -67,12 +68,13 @@ function DeepDive(props) {
           />
         </div>
 
+        {fetched && (
         <div className="card fadeInUp" style={{animationDelay: '0.7s'}}>
           <NormalizedStates
             title="States - Growth Rate"
             data={statesTimeSeries}
           />
-        </div>
+        </div> )}
 
         <div className="card fadeInUp" style={{animationDelay: '0.7s'}}>
           <GenderChart title="Patient Gender" data={rawData} />

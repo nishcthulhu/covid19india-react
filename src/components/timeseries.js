@@ -25,7 +25,7 @@ function TimeSeries(props) {
 
   const wrapperRef = useRef();
   const dimensions = useResizeObserver(wrapperRef);
-
+  console.log(props.timeseries);
   const transformTimeSeries = useCallback(
     (timeseries) => {
       if (timeseries.length > 1) {
